@@ -1,0 +1,5 @@
+git lfs track "*.psd" "*.png" "*.jpg" "*.jpeg" "*.tga" "*.tif" "*.tiff" \
+"*.exr" "*.hdr" "*.bmp" "*.gif" \
+"*.wav" "*.aif" "*.aiff" "*.mp3" "*.ogg" "*.flac" \
+"*.mp4" "*.mov" "*.avi" "*.webm" \
+"*.fbx" "*.mb"
