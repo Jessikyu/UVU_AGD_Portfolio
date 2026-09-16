@@ -20,8 +20,8 @@ public class Fella_Movement : MonoBehaviour
         // Fella movement
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * horizontal + transform.forward * vertical
-        controller.Move(move * moveSpeed * Time.deltaTime);
+        Vector3 move = transform.right * horizontal + transform.forward * vertical;
+        controller.Move(move * Time.deltaTime);
 
        
         // Player camera control
