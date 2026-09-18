@@ -15,7 +15,7 @@ public class Fella_Movement : MonoBehaviour
         // Keeping the cursor in the center of the screen
         Cursor.lockState = CursorLockMode.Locked;
     }
-    void Update()
+    void Update ()
     {
         // Fella movement
         float horizontal = Input.GetAxis("Horizontal");
