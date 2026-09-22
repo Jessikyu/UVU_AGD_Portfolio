@@ -13,6 +13,7 @@ public class Base_Sword : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            Debug.Log ("They took a hit");
         }
     }
 }
@@ -25,6 +26,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int amount)
     {
         health -= amount;
+        Debug.Log ("Ouch");
         // Death clause
         if (health <= 0)
         {
