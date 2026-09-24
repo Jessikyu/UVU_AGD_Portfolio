@@ -152,19 +152,6 @@ CapsuleCollider:
   m_Height: 0.001
   m_Direction: 1
   m_Center: {x: 0, y: 0.03, z: 0}
---- !u!114 &211401220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 211401216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f84b67cb538314ef2b739562b9ec35b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MyWeapon
-  Damage: 100
 --- !u!1001 &259316848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,9 +223,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 211401219}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 211401220}
   m_SourcePrefab: {fileID: 100100000, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
 --- !u!1 &410087039
 GameObject:
@@ -646,10 +630,7 @@ PrefabInstance:
       addedObject: {fileID: 2088834474}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2088834476}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2088834477}
+      addedObject: {fileID: 2088834475}
   m_SourcePrefab: {fileID: 100100000, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
 --- !u!1 &1491608792
 GameObject:
@@ -883,34 +864,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.015, y: 0.025, z: 0.015}
   m_Center: {x: 0, y: 0.01, z: 0}
---- !u!54 &2088834476
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088834471}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &2088834477
+--- !u!114 &2088834475
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -919,10 +873,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2088834471}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0228b6ee76c5c47b9a15d22e88b3c278, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a1a85a37f0e14c55815fc6f6cf0f2ed, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MyEnemy
-  health: 100
+  m_EditorClassIdentifier: '::'
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
