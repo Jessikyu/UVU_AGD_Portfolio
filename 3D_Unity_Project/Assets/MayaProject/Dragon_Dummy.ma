@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Dragon_Dummy.ma
-//Last modified: Fri, Sep 25, 2026 04:19:17 PM
+//Last modified: Fri, Sep 25, 2026 04:27:27 PM
 //Codeset: UTF-8
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,18 +11,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "F0DAAD53-4840-43EC-16C3-20BBDB506F67";
+fileInfo "UUID" "8DC19C8A-1F4D-D0D4-94C6-58A52079839B";
 createNode transform -s -n "persp";
 	rename -uid "47CB3C28-C34F-7243-1356-428C00C6F151";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.3667713493094755 13.022752468050014 -46.092722634267162 ;
-	setAttr ".r" -type "double3" -15.599999999998623 -188.40000000001641 0 ;
+	setAttr ".t" -type "double3" 11.558796272696986 7.9865660857508045 13.125455324210229 ;
+	setAttr ".r" -type "double3" -22.799999999984269 -318.79999999999842 0 ;
 	setAttr ".rpt" -type "double3" 2.1905855475343375e-18 -1.3692750026986369e-19 -2.4628274916115768e-21 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "60025A1B-E54F-4D37-AB4D-68B767424947";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 41.360557401929213;
+	setAttr ".coi" 23.095794428736781;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
