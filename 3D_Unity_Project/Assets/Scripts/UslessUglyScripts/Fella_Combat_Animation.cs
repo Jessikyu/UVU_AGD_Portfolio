@@ -11,9 +11,9 @@ public class Fella_Combat_Animation : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetMouseButtonDown(0))
         {
-            anim.SetTrigger("Attack");
+            anim.SetTrigger(name: "swing");
         }
     }
-}
+} 

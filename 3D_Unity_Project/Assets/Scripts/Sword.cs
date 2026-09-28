@@ -7,7 +7,7 @@ public class Sword : MonoBehaviour
 
    void OnTriggerEnter(Collider other)
    {
-       if (other.CompareTag("Enemy")&& Swinging)
+       if (other.CompareTag("Enemy") && Swinging)
        {
            other.GetComponent<Enemy_Health>().TakeDamage(damage);
        }
