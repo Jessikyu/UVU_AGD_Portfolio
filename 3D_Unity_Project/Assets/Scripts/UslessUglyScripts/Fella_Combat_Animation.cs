@@ -13,7 +13,7 @@ public class Fella_Combat_Animation : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetTrigger(name: "swing");
+            anim.Play("Sword_Swing");
         }
     }
 } 

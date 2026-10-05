@@ -279,7 +279,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -691,7 +691,7 @@ Transform:
   m_GameObject: {fileID: 475479795}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.57, y: 1.32, z: -8.55243}
+  m_LocalPosition: {x: 0.57, y: 1.4, z: -8.55243}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -814,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.56
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       propertyPath: m_Name
-      value: Base_Enemy
+      value: Goober
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       propertyPath: m_Layer
@@ -903,6 +903,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088834480}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2088834482}
   m_SourcePrefab: {fileID: 100100000, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
 --- !u!1 &1491608792
 GameObject:
@@ -1056,7 +1059,7 @@ GameObject:
   - component: {fileID: 1760175752}
   - component: {fileID: 1760175758}
   - component: {fileID: 1760175759}
-  m_Layer: 3
+  m_Layer: 7
   m_Name: Cube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1163,7 +1166,7 @@ Transform:
   m_GameObject: {fileID: 1760175751}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.56, y: 8.09, z: -7.45}
+  m_LocalPosition: {x: -7.56, y: 2.02, z: -7.45}
   m_LocalScale: {x: 3.3246, y: 3.3246, z: 3.3246}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1319,15 +1322,29 @@ NavMeshAgent:
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 0
   m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoTraverseOffMeshLink: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 25
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2088834482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088834471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b02a31bcd58854150befdd81f02ec0ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyWalkies
+  Target: {fileID: 475479799}
+  UpdateSpeed: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
