@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fella_Combat_Animation : MonoBehaviour
+public class SwordAttack : MonoBehaviour
 {
+    [SerializeField] private Animator sword;
     private Animator anim;
     private void start()
     {
@@ -12,8 +13,8 @@ public class Fella_Combat_Animation : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
-        {
-            anim.Play("Sword_Swing");
-        }
+            {
+                sword.Play("Sword_Swing", 0, 0f);
+            }
     }
-} 
+}
