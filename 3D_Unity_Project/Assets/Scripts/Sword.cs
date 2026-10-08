@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Sword : MonoBehaviour
 {
-   public int damage = 1;
+   public float damage = .5f;
    private bool Swinging = false;
 
    void OnTriggerEnter(Collider other)
