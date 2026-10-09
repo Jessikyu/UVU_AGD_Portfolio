@@ -7,6 +7,7 @@ public class Fella_Movement : MonoBehaviour
     public float walkSpeed = 5f; // Fella's walk speed
     public Transform cameraTransform;
     public float mouseSensitivity = 2f;
+    public GameObject pauseMenuContainer;
 
     private CharacterController controller;
 
@@ -39,5 +40,10 @@ public class Fella_Movement : MonoBehaviour
             desiredRotationX -= 360;
         desiredRotationX = Mathf.Clamp(desiredRotationX, -90f, 90f);
         cameraTransform.rotation = Quaternion.Euler(desiredRotationX, currentRotation.y, currentRotation.z);
+
+        if (pauseMenuContainer.activeSelf) 
+        {
+            Cursor.lockState = CursorLockMode.None;
+        } 
     }
 }

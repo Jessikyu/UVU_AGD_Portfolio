@@ -30,9 +30,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    public void Options()
+    public void Surrender()
     {
-        // Open your options menu here
+        UnityEngine.SceneManagement.SceneManager.LoadScene("The Forge");
     }
 
     public void Exit()
