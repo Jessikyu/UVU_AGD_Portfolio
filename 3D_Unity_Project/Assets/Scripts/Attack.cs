@@ -15,7 +15,7 @@ public class Attack : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
             {
-                anim.SetTrigger(name: "Attack");
+                anim.SetTrigger(name: "swing");
             }
     }
 

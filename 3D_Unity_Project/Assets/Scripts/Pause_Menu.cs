@@ -18,7 +18,7 @@ public class PauseMenu : MonoBehaviour
         {
             gameState = !gameState;
 
-            container.SetActive(gameState);
+            container.SetActive(gameState); 
             Time.timeScale = gameState ? 0f : 1f;
         }
     }
