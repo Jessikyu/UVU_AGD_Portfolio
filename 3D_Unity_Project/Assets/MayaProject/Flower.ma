@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Flower.ma
-//Last modified: Wed, Oct 14, 2026 11:25:39 PM
+//Last modified: Tue, Oct 20, 2026 12:32:41 PM
 //Codeset: UTF-8
 requires maya "2025ff03";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
@@ -11,17 +11,17 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "A5D62665-424F-B7E4-DA30-ABB33485219D";
+fileInfo "UUID" "AAE895A5-984B-D0B7-29A7-518DDAB3E798";
 createNode transform -s -n "persp";
 	rename -uid "7B78B47D-CA42-6957-6C8A-02A2DDD4BB73";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -2.3329859991793107 8.0852814219326401 22.324840129567665 ;
-	setAttr ".r" -type "double3" -8.7383527591668635 1791.3999999981631 0 ;
+	setAttr ".t" -type "double3" -5.5033290711195653 6.736657470791827 -1.8627906436195847 ;
+	setAttr ".r" -type "double3" -21.938352758659139 1332.2000000000146 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "98EB7F75-FF49-05B6-3E9B-848F0E3F4199";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 22.814131935816576;
+	setAttr ".coi" 7.5391823139272125;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -156,6 +156,7 @@ createNode transform -n "Pollen_Core";
 	rename -uid "5303E53B-4F48-3E46-5237-F3A05E1A3EFD";
 	setAttr ".t" -type "double3" -0.041273838145292258 5.4466764680039894 0.0037281233217004591 ;
 	setAttr ".r" -type "double3" -2.2942181729338573 8.1509213195224905 7.1514371359954341 ;
+	setAttr ".s" -type "double3" 0.78751915274277817 0.78751915274277817 0.78751915274277817 ;
 	setAttr ".rp" -type "double3" -4.5536491244391186e-18 -0.95105627902778256 0 ;
 	setAttr ".rpt" -type "double3" -0.0066048519186610866 -0.00059121635047472594 -0.0037281233217005133 ;
 	setAttr ".sp" -type "double3" -4.5536491244391186e-18 -0.95105627902778256 0 ;
@@ -182,6 +183,7 @@ createNode mesh -n "Pollen_CoreShape" -p "Pollen_Core";
 		-0.033785708 -1.0479592e-08;
 createNode transform -n "Petals";
 	rename -uid "85AED9DD-6A4F-A8E2-52C9-CB98D6F76405";
+	setAttr ".s" -type "double3" 0.97598715077559528 0.97598715077559528 0.97598715077559528 ;
 	setAttr ".rp" -type "double3" -0.26890986981608767 5.7915861637771142 0.163604965126668 ;
 	setAttr ".sp" -type "double3" -0.26890986981608767 5.7915861637771142 0.163604965126668 ;
 createNode transform -n "Petal1" -p "Petals";
@@ -4491,20 +4493,20 @@ createNode mesh -n "polySurfaceShape1" -p "Petal12";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "72E17BE3-4C47-2A76-3E53-4B9219B6773F";
+	rename -uid "37B11E86-8342-D129-2B73-CA89E9D49435";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "741C0214-534B-9397-A3B8-D89C347CB788";
+	rename -uid "5DBB283C-1C47-3184-6222-0F948A5B6296";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "CC21DC2B-E743-59EA-2E9A-6985191B6707";
+	rename -uid "B9B036C9-C54F-9091-8C06-509D4BB19376";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "0C1A0583-4C41-5041-1487-9499D0B8B31B";
+	rename -uid "7D784693-FD47-DC24-DD59-5EBE94EBB3D3";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "E3AEA04F-6941-BDF5-E0F3-838DEFFB9D9E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "E765505A-DF44-045F-95E4-74ACEDAAA458";
+	rename -uid "F93A4C41-2B41-1E58-4AA8-3C9CFE3F7B74";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "A4F9E060-6C45-643E-4396-389195D38BCC";
 	setAttr ".g" yes;
