@@ -1,6 +1,6 @@
 //Maya ASCII 2025ff03 scene
 //Name: Dungeon_Room.ma
-//Last modified: Tue, Nov 03, 2026 06:51:21 PM
+//Last modified: Wed, Nov 04, 2026 01:29:44 PM
 //Codeset: UTF-8
 file -rdi 1 -ns "Modular_Crates" -rfn "Modular_CratesRN" -op "v=0;" -typ "mayaAscii"
 		 "/Users/jessiegrulich/UVU/UVU_AGD_Repo/UVU_AGD_Portfolio/3D_Unity_Project/Assets/MayaProject//Modular_Crates.ma";
@@ -18,18 +18,18 @@ fileInfo "product" "Maya 2025";
 fileInfo "version" "2025";
 fileInfo "cutIdentifier" "202512041342-b90de33065";
 fileInfo "osv" "Mac OS X 20.6.2";
-fileInfo "UUID" "C480DC25-854C-6C18-7977-688C9F58280B";
+fileInfo "UUID" "31B361A0-D643-AC20-EE46-8BB79318D2A3";
 createNode transform -s -n "persp";
 	rename -uid "B65DE531-D54B-1FE1-A4D7-84B9F3C9BED0";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 37.997353646247205 32.732759185935734 13.733809178429723 ;
-	setAttr ".r" -type "double3" -395.99999999308011 -1719.1999999996081 0 ;
+	setAttr ".t" -type "double3" -6.5847765248274586 17.64476822087677 13.375473876865975 ;
+	setAttr ".r" -type "double3" -387.59999999316165 -1808.7999999994981 0 ;
 	setAttr ".rpt" -type "double3" -4.8646324452650431e-18 7.8889622364975861e-18 -5.7448114302870475e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "834AC105-5544-075A-89C7-EB84605CCD35";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 49.51781406486208;
+	setAttr ".coi" 22.937255673147128;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -50735,7 +50735,7 @@ createNode openPBRSurface -n "Floor_Mat";
 createNode shadingEngine -n "openPBRSurface3SG";
 	rename -uid "C040D7FA-A146-BB9C-B1E4-B2AEC26CFC67";
 	setAttr ".ihi" 0;
-	setAttr -s 6 ".dsm";
+	setAttr -s 5 ".dsm";
 	setAttr ".ro" yes;
 createNode materialInfo -n "materialInfo3";
 	rename -uid "F2105021-9B49-2E9E-492F-2AA7E7DF2F9E";
@@ -50839,7 +50839,7 @@ createNode reference -n "Base_SwordRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode nodeGraphEditorInfo -n "hyperShadePrimaryNodeEditorSavedTabsInfo";
-	rename -uid "8287BA07-D840-83DC-05E5-93A5F07EF7E0";
+	rename -uid "C72463A6-8A46-AC85-05BB-B5843329251E";
 	setAttr ".tgi[0].tn" -type "string" "Untitled_1";
 	setAttr ".tgi[0].vl" -type "double2" -2184.5237227186362 -651.20757222179714 ;
 	setAttr ".tgi[0].vh" -type "double2" -1533.3332724041436 -192.84001328638433 ;
@@ -50969,7 +50969,7 @@ select -ne :initialShadingGroup;
 	setAttr -cb on ".ihi";
 	setAttr -av -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 16 ".dsm";
+	setAttr -s 17 ".dsm";
 	setAttr -k on ".mwc";
 	setAttr -cb on ".an";
 	setAttr -cb on ".il";
