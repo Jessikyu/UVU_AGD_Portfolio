@@ -534,39 +534,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.896
+      value: 0.728
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.806
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.960734
+      value: 0.92151076
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.27747124
+      value: 0.2661431
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.27171266
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.07847382
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 32.219
+      value: 26.607
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 37.359
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 18.876
       objectReference: {fileID: 0}
     - target: {fileID: -7334951474422550414, guid: 5133db6fd6c404aa4aa51fee41a716b8, type: 3}
       propertyPath: m_Layer
@@ -1905,10 +1905,10 @@ PrefabInstance:
       addedObject: {fileID: 2088834478}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2088834480}
+      addedObject: {fileID: 2088834484}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2088834482}
+      addedObject: {fileID: 2088834480}
   m_SourcePrefab: {fileID: 100100000, guid: b272955c04d3242b4a4f9c01a710b16c, type: 3}
 --- !u!1 &1491608792
 GameObject:
@@ -2240,8 +2240,8 @@ GameObject:
   - component: {fileID: 1760175754}
   - component: {fileID: 1760175758}
   - component: {fileID: 1760175759}
+  - component: {fileID: 1760175763}
   - component: {fileID: 1760175761}
-  - component: {fileID: 1760175760}
   m_Layer: 7
   m_Name: Cube
   m_TagString: Enemy
@@ -2392,20 +2392,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1760175760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760175751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02a31bcd58854150befdd81f02ec0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyWalkies
-  Target: {fileID: 475479799}
-  UpdateSpeed: 0.1
 --- !u!195 &1760175761
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2441,6 +2427,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   Health: 4
+--- !u!114 &1760175763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760175751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5e0ef2b69a14e5081e0113000a6506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  player: {fileID: 475479799}
+  detectionRadius: 15
+  attackRange: 2
+  patrolRadius: 20
+  attackCooldown: 2
+  patrolIdleTime: 3
+  rotationSpeed: 7
+  attackDuration: 1
+  damageDelay: 0.4
 --- !u!1 &1865614584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,20 +2916,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2088834482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2088834471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b02a31bcd58854150befdd81f02ec0ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyWalkies
-  Target: {fileID: 475479799}
-  UpdateSpeed: 0.1
 --- !u!114 &2088834483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2936,6 +2929,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   Health: 2
+--- !u!114 &2088834484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088834471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5e0ef2b69a14e5081e0113000a6506, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  player: {fileID: 475479799}
+  detectionRadius: 15
+  attackRange: 2
+  patrolRadius: 20
+  attackCooldown: 2
+  patrolIdleTime: 3
+  rotationSpeed: 7
+  attackDuration: 1
+  damageDelay: 0.4
 --- !u!1 &2102938146
 GameObject:
   m_ObjectHideFlags: 0
