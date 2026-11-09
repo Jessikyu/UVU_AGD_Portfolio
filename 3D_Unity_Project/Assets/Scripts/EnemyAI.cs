@@ -5,7 +5,7 @@ public class EnemyAI : MonoBehaviour
 {
     [Header("References")]
     public Transform player;
-    //public PlayerHealth playerHealth;
+    public PlayerHealth playerHealth;
  
     [Header("Settings")]
     public float detectionRadius = 15f;
@@ -35,9 +35,9 @@ public class EnemyAI : MonoBehaviour
  
     void Start()
     {
-        //playerHealth = GameObject.Find("Player").GetComponent<PlayerHealth>();
+        playerHealth = GameObject.Find("Fella").GetComponent<PlayerHealth>();
         agent = GetComponent<NavMeshAgent>();
-       // if (playerHealth == null && player != null) playerHealth = player.GetComponent<PlayerHealth>();
+        if (playerHealth == null && player != null) playerHealth = player.GetComponent<PlayerHealth>();
  
         SetNewPatrolPoint();
         currentState = State.Patrol;
@@ -151,7 +151,7 @@ public class EnemyAI : MonoBehaviour
     {
         if (isAttacking) return;
 
-        //if (player == null || playerHealth == null)
+        if (player == null || playerHealth == null)
             return;
 
         float distance = Vector3.Distance(
@@ -203,9 +203,9 @@ public class EnemyAI : MonoBehaviour
             return;
         }
 
-       // if (playerHealth == null)
+        if (playerHealth == null)
         {
-            //Debug.LogError("EnemyAI: PlayerHealth reference is missing!");
+            Debug.LogError("EnemyAI: PlayerHealth reference is missing!");
             return;
         }
 
@@ -218,7 +218,7 @@ public class EnemyAI : MonoBehaviour
 
         if (distance <= attackRange)
         {
-           // playerHealth.TakeDamage(10);
+            playerHealth.TakeDamage(10);
             Debug.Log("Player took 10 damage!");
         }
         else
