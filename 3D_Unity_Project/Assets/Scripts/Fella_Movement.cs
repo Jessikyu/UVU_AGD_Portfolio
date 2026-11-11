@@ -20,27 +20,29 @@ public class Fella_Movement : MonoBehaviour
     }
     void Update ()
     {
-        // Fella movement
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        Vector3 move = transform.right * horizontal + transform.forward * vertical;
-        controller.Move(move * Time.deltaTime * walkSpeed);
+        if (!pauseMenuContainer.activeSelf)
+        {
+            // Fella movement
+            float horizontal = Input.GetAxis("Horizontal");
+            float vertical = Input.GetAxis("Vertical");
+            Vector3 move = transform.right * horizontal + transform.forward * vertical;
+            controller.Move(move * Time.deltaTime * walkSpeed);
+        
 
        
-        // Player camera control
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
-        transform.Rotate(Vector3.up * mouseX); 
+            // Player camera control
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+            transform.Rotate(Vector3.up * mouseX); 
 
-       
-        // Rotate the camera vertically
-        Vector3 currentRotation = cameraTransform.rotation.eulerAngles;
-        float desiredRotationX = currentRotation.x - mouseY;
-        if (desiredRotationX > 180)
+            // Rotate the camera vertically
+            Vector3 currentRotation = cameraTransform.rotation.eulerAngles;
+            float desiredRotationX = currentRotation.x - mouseY;
+            if (desiredRotationX > 180)
             desiredRotationX -= 360;
-        desiredRotationX = Mathf.Clamp(desiredRotationX, -90f, 90f);
-        cameraTransform.rotation = Quaternion.Euler(desiredRotationX, currentRotation.y, currentRotation.z);
-
+            desiredRotationX = Mathf.Clamp(desiredRotationX, -90f, 90f);
+            cameraTransform.rotation = Quaternion.Euler(desiredRotationX, currentRotation.y, currentRotation.z);
+        }
         if (pauseMenuContainer.activeSelf)
         {
             Cursor.lockState = CursorLockMode.None;
