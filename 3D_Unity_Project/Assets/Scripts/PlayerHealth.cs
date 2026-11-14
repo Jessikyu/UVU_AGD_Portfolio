@@ -29,4 +29,12 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
     }
+
+    public void GameOver()
+    {
+        if (currentHealth <= 0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Main_Menu");
+        }
+    }
 }
