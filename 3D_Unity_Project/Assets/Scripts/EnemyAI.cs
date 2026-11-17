@@ -35,6 +35,9 @@ public class EnemyAI : MonoBehaviour
  
     void Start()
     {
+        GameObject playerobj = GameObject.Find("Fella");
+        player = playerobj.transform;
+        //player = gameObject.Find("Player").GetComponent<Transform>();
         playerHealth = GameObject.Find("Fella").GetComponent<PlayerHealth>();
         agent = GetComponent<NavMeshAgent>();
         if (playerHealth == null && player != null) playerHealth = player.GetComponent<PlayerHealth>();

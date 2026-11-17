@@ -43,9 +43,6 @@ public class Fella_Movement : MonoBehaviour
             desiredRotationX = Mathf.Clamp(desiredRotationX, -90f, 90f);
             cameraTransform.rotation = Quaternion.Euler(desiredRotationX, currentRotation.y, currentRotation.z);
         }
-        if (pauseMenuContainer.activeSelf)
-        {
-            Cursor.lockState = CursorLockMode.None;
-        } 
+
     }
 }
